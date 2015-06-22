@@ -107,7 +107,6 @@ boolean useFilters = false;
 
 int LED = 11;  // blue LED alias
 int PGCpin = 12;  // PGC pin goes high when PIC is in bootloader mode
-int myPin=13;
 //------------------------------------------------------------------------------
 
 void setup(void) {
@@ -115,7 +114,6 @@ void setup(void) {
   Serial0.begin(115200);  // using hardware uart number 0
   pinMode(LED, OUTPUT); digitalWrite(LED,HIGH);    // blue LED
   pinMode(PGCpin,OUTPUT); digitalWrite(PGCpin,LOW);// used to tell RFduino if we are in bootloader mode
-  pinMode(myPin,OUTPUT);digitalWrite(myPin,LOW);//my pin
   
   //Interrupt initialization sequence 
   INTCONbits.MVEC=1; // enable multivectored interrupts
